@@ -188,8 +188,9 @@ pip install akshare akshare-proxy-patch tushare pandas numpy
 
 当用户请求复盘时，PI.dev 将执行以下逻辑：
 
-1. 运行 `scripts/tushare_data.py` 获取tushare 结构化数据。
-2. 运行 `scripts/akshare_data.py` 获取akshare 免费数据。
+1. 运行 `scripts/tushare_data.py` 获取维度1~5的数据。
+2. 运行 `scripts/akshare_data.py` 获取维度2~3的补充数据。
+2. 运行 `scripts/concept_data.py` 获取维度6~7的数据
 3. **严格依据【第1节：核心角色设定】扮演四位游资**，对返回的 JSON 数据进行解读。
 4. 按照 **【第4节：输出报告格式】** 生成带有 `Asking说`、`养家说` 等标签的深度分析 Markdown 文档。
 5. 在 Markdown 内容的基础上，AI 应将其转换为一份独立的 HTML 文档。具体方法：
